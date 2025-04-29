@@ -3,9 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MarketCompare - Price Comparison Across Markets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Price Pulse</h1>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">MarketCompare</div>
+                <ul class="nav-links">
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#compare">Compare</a></li>
+                    <li><a href="#insights">Insights</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            
+            <div class="hero">
+                <h1>Compare Prices Across Markets</h1>
+                <p class="tagline">Find the best deals on products in your state's markets</p>
+                <button class="cta-button">Start Comparing Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Products Section -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="featured-products">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Organic Apples">
+                    <h3>Organic Apples</h3>
+                    <div class="price-range">$1.99 - $3.49 per lb</div>
+                    <div class="markets">Available in 8 markets</div>
+                    <button class="compare-button">Compare Prices</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Whole Grain Bread">
+                    <h3>Whole Grain Bread</h3>
+                    <div class="price-range">$2.49 - $4.99 per loaf</div>
+                    <div class="markets">Available in 12 markets</div>
+                    <button class="compare-button">Compare Prices</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Free-Range Eggs">
+                    <h3>Free-Range Eggs</h3>
+                    <div class="price-range">$3.99 - $6.49 per dozen</div>
+                    <div class="markets">Available in 10 markets</div>
+                    <button class="compare-button">Compare Prices</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Local Honey">
+                    <h3>Local Honey</h3>
+                    <div class="price-range">$7.99 - $12.99 per jar</div>
+                    <div class="markets">Available in 6 markets</div>
+                    <button class="compare-button">Compare Prices</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="search-section">
+        <div class="container">
+            <h2>Find Products & Compare Prices</h2>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Search for products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filters">
+                    <select class="filter-select">
+                        <option value="">Select Category</option>
+                        <option value="fruits">Fruits & Vegetables</option>
+                        <option value="dairy">Dairy & Eggs</option>
+                        <option value="bakery">Bakery</option>
+                        <option value="meat">Meat & Seafood</option>
+                        <option value="pantry">Pantry Items</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">Select Location</option>
+                        <option value="north">North Region</option>
+                        <option value="south">South Region</option>
+                        <option value="east">East Region</option>
+                        <option value="west">West Region</option>
+                        <option value="central">Central Region</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">Sort By</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                        <option value="popularity">Popularity</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Comparison Section -->
+    <section id="compare" class="comparison-section">
+        <div class="container">
+            <h2>Price Comparison</h2>
+            <div class="view-toggle">
+                <button class="active" data-view="cards"><i class="fas fa-th"></i> Cards</button>
+                <button data-view="table"><i class="fas fa-table"></i> Table</button>
+            </div>
+            
+            <!-- Card View -->
+            <div class="comparison-cards">
+                <div class="comparison-card">
+                    <div class="product-info">
+                        <img src="https://via.placeholder.com/100x100" alt="Organic Apples">
+                        <h3>Organic Apples</h3>
+                    </div>
+                    <div class="market-prices">
+                        <div class="market-price">
+                            <span class="market-name">Farmer's Market</span>
+                            <span class="price">$1.99/lb</span>
+                        </div>
+                        <div class="market-price">
+                            <span class="market-name">Green Grocer</span>
+                            <span class="price">$2.49/lb</span>
+                        </div>
+                        <div class="market-price">
+                            <span class="market-name">Super Foods</span>
+                            <span class="price">$2.99/lb</span>
+                        </div>
+                        <div class="market-price">
+                            <span class="market-name">Organic Outlet</span>
+                            <span class="price">$3.49/lb</span>
+                        </div>
+                    </div>
+                    <div class="best-price">
+                        <span>Best Price:</span>
+                        <span class="price">$1.99/lb at Farmer's Market</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-card">
+                    <div class="product-info">
+                        <img src="https://via.placeholder.com/100x100" alt="Whole Grain Bread">
+                        <h3>Whole Grain Bread</h3>
+                    </div>
+                    <div class="market-prices">
+                        <div class="market-price">
+                            <span class="market-name">Artisan Bakery</span>
+                            <span class="price">$4.99/loaf</span>
+                        </div>
+                        <div class="market-price">
+                            <span class="market-name">Super Foods</span>
+                            <span class="price">$3.49/loaf</span>
+                        </div>
+                        <div class="market-price">
+                            <span class="market-name">Value Mart</span>
+                            <span class="price">$2.49/loaf</span>
+                        </div>
+                        <div class="market-price">
+                            <span class="market-name">Fresh & Local</span>
+                            <span class="price">$4.49/loaf</span>
+                        </div>
+                    </div>
+                    <div class="best-price">
+                        <span>Best Price:</span>
+                        <span class="price">$2.49/loaf at Value Mart</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Table View (hidden by default) -->
+            <div class="comparison-table" style="display: none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Farmer's Market</th>
+                            <th>Green Grocer</th>
+                            <th>Super Foods</th>
+                            <th>Organic Outlet</th>
+                            <th>Artisan Bakery</th>
+                            <th>Value Mart</th>
+                            <th>Fresh & Local</th>
+                            <th>Best Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Organic Apples</td>
+                            <td>$1.99/lb</td>
+                            <td>$2.49/lb</td>
+                            <td>$2.99/lb</td>
+                            <td>$3.49/lb</td>
+                            <td>-</td>
+                            <td>$2.79/lb</td>
+                            <td>$2.29/lb</td>
+                            <td>$1.99/lb at Farmer's Market</td>
+                        </tr>
+                        <tr>
+                            <td>Whole Grain Bread</td>
+                            <td>-</td>
+                            <td>$3.99/loaf</td>
+                            <td>$3.49/loaf</td>
+                            <td>$3.99/loaf</td>
+                            <td>$4.99/loaf</td>
+                            <td>$2.49/loaf</td>
+                            <td>$4.49/loaf</td>
+                            <td>$2.49/loaf at Value Mart</td>
+                        </tr>
+                        <tr>
+                            <td>Free-Range Eggs</td>
+                            <td>$4.99/dozen</td>
+                            <td>$5.49/dozen</td>
+                            <td>$4.99/dozen</td>
+                            <td>$6.49/dozen</td>
+                            <td>-</td>
+                            <td>$3.99/dozen</td>
+                            <td>$5.99/dozen</td>
+                            <td>$3.99/dozen at Value Mart</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section id="insights" class="insights-section">
+        <div class="container">
+            <h2>Market Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Price Trends</h3>
+                    <p>Fruit prices have decreased by 8% over the last month, while dairy products have seen a 5% increase.</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Best Value Markets</h3>
+                    <p>Value Mart consistently offers the lowest prices across most product categories, followed by Farmer's Market for fresh produce.</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Regional Differences</h3>
+                    <p>Southern region markets offer lower prices on fruits and vegetables, while northern markets have better deals on dairy and bakery items.</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Seasonal Impacts</h3>
+                    <p>Current seasonal produce (apples, pumpkins, squash) shows price reductions of up to 15% compared to last month.</p>
+                </div>
+            </div>
+            
+            <div class="market-ranking">
+                <h3>Market Price Ranking</h3>
+                <div class="ranking-bars">
+                    <div class="ranking-item">
+                        <span class="market-name">Value Mart</span>
+                        <div class="ranking-bar">
+                            <div class="bar-fill" style="width: 95%;"></div>
+                        </div>
+                        <span class="score">9.5</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="market-name">Farmer's Market</span>
+                        <div class="ranking-bar">
+                            <div class="bar-fill" style="width: 88%;"></div>
+                        </div>
+                        <span class="score">8.8</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="market-name">Super Foods</span>
+                        <div class="ranking-bar">
+                            <div class="bar-fill" style="width: 82%;"></div>
+                        </div>
+                        <span class="score">8.2</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="market-name">Green Grocer</span>
+                        <div class="ranking-bar">
+                            <div class="bar-fill" style="width: 75%;"></div>
+                        </div>
+                        <span class="score">7.5</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="market-name">Fresh & Local</span>
+                        <div class="ranking-bar">
+                            <div class="bar-fill" style="width: 70%;"></div>
+                        </div>
+                        <span class="score">7.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About MarketCompare</h3>
+                    <p>MarketCompare helps consumers and researchers find the best prices across different markets in the state. Our mission is to promote price transparency and help you save money.</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#featured">Featured Products</a></li>
+                        <li><a href="#compare">Price Comparison</a></li>
+                        <li><a href="#insights">Market Insights</a></li>
+                        <li><a href="#">Methodology</a></li>
+                        <li><a href="#">Data Sources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@marketcompare.com</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Market St, Anytown, USA</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MarketCompare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // View toggle (Cards/Table)
+        const viewButtons = document.querySelectorAll('.view-toggle button');
+        const cardsView = document.querySelector('.comparison-cards');
+        const tableView = document.querySelector('.comparison-table');
+        
+        viewButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                viewButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const view = this.getAttribute('data-view');
+                if (view === 'cards') {
+                    cardsView.style.display = 'flex';
+                    tableView.style.display = 'none';
+                } else {
+                    cardsView.style.display = 'none';
+                    tableView.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
