@@ -1,0 +1,592 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+section {
+    padding: 60px 0;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    padding: 20px 0 100px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #ecf0f1;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #ecf0f1;
+}
+
+.cta-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Featured Products Section */
+.featured-section {
+    background-color: white;
+    text-align: center;
+}
+
+.featured-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+}
+
+.price-range {
+    color: #e74c3c;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.markets {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.compare-button {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.compare-button:hover {
+    background-color: #2980b9;
+}
+
+/* Search and Filter Section */
+.search-section {
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+.search-box button {
+    background-color: #3498db;
+    color: white;
+    padding: 0 20px;
+    border-radius: 0 4px 4px 0;
+    font-size: 18px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.filter-select {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+}
+
+/* Comparison Section */
+.comparison-section {
+    background-color: white;
+    text-align: center;
+}
+
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.view-toggle button {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+
+.view-toggle button.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.comparison-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comparison-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.product-info img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.market-prices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.market-price {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+.market-name {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.best-price {
+    width: 100%;
+    background-color: #e8f4fd;
+    padding: 10px;
+    border-radius: 4px;
+    color: #2980b9;
+    font-weight: 500;
+}
+
+.comparison-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f1f1f1;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Insights Section */
+.insights-section {
+    background-color: #ecf0f1;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.insight-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-5px);
+}
+
+.insight-icon {
+    font-size: 36px;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.insight-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.insight-card p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.market-ranking {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+.ranking-bars {
+    margin-top: 20px;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.market-name {
+    width: 120px;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.ranking-bar {
+    flex: 1;
+    height: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 15px;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    border-radius: 10px;
+}
+
+.score {
+    width: 40px;
+    font-weight: 600;
+    color: #2980b9;
+}
+
+/* Footer Section */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    color: #bdc3c7;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #bdc3c7;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .footer-section {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #2c3e50;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.5s ease;
+        z-index: 100;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 20px 0;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .tagline {
+        font-size: 18px;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    .comparison-card {
+        flex-direction: column;
+    }
+    
+    .market-prices {
+        justify-content: center;
+    }
+    
+    .footer-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+    
+    .product-card {
+        width: 100%;
+    }
+    
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ranking-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .market-name {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+    
+    .ranking-bar {
+        margin: 5px 0;
+    }
+}
