@@ -1,4 +1,4 @@
-# Nigerian Price Tracker Project Summary
+# Price Pulse Project Summary
 
 ## Project Overview
 
